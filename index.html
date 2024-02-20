@@ -1,0 +1,146 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+  <head>
+    <title>CSS</title>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <link rel="stylesheet" type="text/css" href="./styles/css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 class="shipping-info">
+        Free ground shipping on all orders over $100
+      </h1>
+      <div class="main-menu">
+        <nav class="menu">
+          <ul>
+            <li><a rel="nofollow" target="_blank" href="#">Men</a></li>
+            <li><a rel="nofollow" target="_blank" href="#">Women</a></li>
+            <li><a rel="nofollow" target="_blank" href="#">Our story</a></li>
+            <li><a rel="nofollow" target="_blank" href="#">Stores</a></li>
+          </ul>
+        </nav>
+        <div class="icon-menu">
+          <a href="#" class="icon-text search-icon">Search </a>
+          <a href="#" class="icon-text chat-icon"> Live assistant </a>
+          <a href="#" class="icon-text account-icon"> My account </a>
+          <a href="#" class="icon-text favourite-icon">Wishlist </a>
+          <a href="#" class="icon-text cart-icon">Cart </a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <ul class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">My account</a></li>
+      </ul>
+
+      <section class="account-page">
+        <article class="login">
+          <h2 class="login__title">Log in</h2>
+          <form action="#" method="post" class="login__form">
+            <input
+              type="text"
+              id="login"
+              name="login"
+              placeholder="Login"
+              required
+            />
+            <input
+              type="password"
+              id="password"
+              name="passwordl"
+              placeholder="Password"
+              required
+            />
+            <span class="toggle-password" onclick="togglePasswordVisibility()">
+              <img
+                src="/images/EyeSlash.png"
+                alt="Toggle Password Visibility"
+              />
+            </span>
+            <a href="#" class="login__button">Login</a>
+            <a href="#" class="login__forgot">Forgot password?</a>
+          </form>
+        </article>
+
+        <article class="new-account">
+          <h2 class="new-account__title">New customer? Create an account!</h2>
+          <ul class="new-account__services">
+            <li class="service service-order">
+              <a href="#">Order tracking and history</a>
+            </li>
+            <li class="service service-return"><a href="#">Easy returns</a></li>
+            <li class="service service-manage">
+              <a href="#">Manage your addresses</a>
+            </li>
+            <li class="service service-wishlist">
+              <a href="#">Save your wishlists for later</a>
+            </li>
+          </ul>
+          <a href="#" class="new-account__button" id="createAccountButton"
+            >Create an account</a
+          >
+        </article>
+      </section>
+
+      <section id="createAccountModal" class="modal">
+        <div class="modal__content">
+          <span class="modal__close" id="closeModal">&times;</span>
+          <p class="modal__text">This is the modal content.</p>
+        </div>
+      </section>
+
+      <section class="subscription">
+        <p class="subscription__info">
+          Want exclusive access to new products, promotions and events from
+          Lucchese? <br />
+          Sign up and be the first to know!
+        </p>
+        <form action="#" method="post" class="subscription__form">
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-mail"
+            required
+          />
+          <a href="#" class="subscription__form-button">Submit</a>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">Footer</p>
+    </footer>
+
+    <script>
+      let createAccountButton = document.getElementById("createAccountButton");
+      let createAccountModal = document.getElementById("createAccountModal");
+      let closeModal = document.getElementById("closeModal");
+
+      createAccountButton.onclick = function () {
+        createAccountModal.style.display = "block";
+      };
+
+      closeModal.onclick = function () {
+        createAccountModal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == createAccountModal) {
+          createAccountModal.style.display = "none";
+        }
+      };
+
+      let passwordInput = document.getElementById("password");
+      let togglePassword = document.querySelector(".toggle-password");
+
+      togglePassword.onclick = function () {
+        passwordInput.type =
+          passwordInput.type === "password" ? "text" : "password";
+        passwordInput.classList.toggle("visible-password");
+      };
+    </script>
+  </body>
+</html>
