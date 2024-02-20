@@ -4,7 +4,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-html {
+ html {
   font-family: sans-serif;
   /* 1 */
   -ms-text-size-adjust: 100%;
@@ -381,3 +381,614 @@ body {
  *  Learn to use a semantic stylesheet to account for your semantic HTML.
  *
  */
+@font-face {
+  font-family: "Brandon Grotesque";
+  src: url("/fonts/Brandon_reg.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  font-family: "Brandon Grotesque", sans-serif;
+}
+header .shipping-info {
+  background-color: #715353;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 6px 0;
+  text-align: center;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  header .shipping-info {
+    padding: 10px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .shipping-info {
+    padding: 5px;
+    font-size: 10px;
+  }
+}
+header .main-menu {
+  display: flex;
+  padding: 10px 80px;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #d9d9d9;
+}
+@media screen and (max-width: 768px) {
+  header .main-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .main-menu {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+header .main-menu .menu ul {
+  padding: 0;
+  margin: 0;
+}
+@media screen and (max-width: 480px) {
+  header .main-menu .menu ul {
+    display: flex;
+    height: 60px;
+  }
+}
+header .main-menu .menu ul li {
+  display: inline;
+  margin-right: 30px;
+}
+header .main-menu .menu ul li:last-child {
+  margin-right: 0;
+}
+header .main-menu .menu ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #715353;
+}
+@media screen and (max-width: 768px) {
+  header .main-menu .menu ul li a {
+    margin-right: 15px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .main-menu .menu ul li a {
+    margin-right: 10px;
+    font-size: 10px;
+  }
+}
+header .main-menu .menu ul li a:hover {
+  color: #0056b3;
+}
+header .main-menu .icon-menu {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+header .main-menu .icon-menu .icon-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-decoration: none;
+  color: #0c2752;
+  text-transform: uppercase;
+  font-weight: 450;
+  font-size: 8px;
+  line-height: 22px;
+  letter-spacing: 1.4;
+}
+@media screen and (max-width: 768px) {
+  header .main-menu .icon-menu .icon-text {
+    gap: 20px;
+    font-size: 10px;
+    letter-spacing: 0.4;
+  }
+}
+@media screen and (max-width: 480px) {
+  header .main-menu .icon-menu .icon-text {
+    gap: 5px;
+    font-size: 8px;
+  }
+}
+header .main-menu .icon-menu .icon-text:hover {
+  color: #0056b3;
+}
+header .main-menu .icon-menu .search-icon::before {
+  content: url("/images/MagnifyingGlass.png");
+}
+header .main-menu .icon-menu .chat-icon::before {
+  content: url("/images/Chats.png");
+}
+header .main-menu .icon-menu .account-icon::before {
+  content: url("/images/User.png");
+}
+header .main-menu .icon-menu .favourite-icon::before {
+  content: url("/images/Wishlist.png");
+}
+header .main-menu .icon-menu .cart-icon::before {
+  content: url("/images/ShoppingCart.png");
+}
+.breadcrumb {
+  padding: 10px 56px;
+  list-style: none;
+}
+.breadcrumb li {
+  display: inline;
+}
+.breadcrumb li + li:before {
+  padding: 8px;
+  color: #d9d9d9;
+  content: "/\00a0";
+}
+.breadcrumb li a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 390;
+  font-size: 16px;
+  line-height: 16px;
+  transition: color 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .breadcrumb li a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .breadcrumb li a {
+    font-size: 10px;
+  }
+}
+.breadcrumb li a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+.account-page {
+  display: flex;
+  padding: 60px;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+@media screen and (max-width: 768px) {
+  .account-page {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+}
+.account-page .login {
+  padding: 24px 140px;
+  flex: 1;
+}
+@media screen and (max-width: 768px) {
+  .account-page .login {
+    padding: 10px;
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .account-page .login {
+    padding: 5px;
+    min-width: 100%;
+  }
+}
+.account-page .login__title {
+  color: #0c2752;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .account-page .login__title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .account-page .login__title {
+    font-size: 18px;
+  }
+}
+.account-page .login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+.account-page .login__form input {
+  border: 1px solid #d9d9d9;
+  padding: 10px 8px 10px 10px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .account-page .login__form input {
+    padding: 8px 6px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .account-page .login__form input {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+}
+.account-page .login__form input::placeholder {
+  color: #000000;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 390;
+}
+.account-page .login .toggle-password {
+  position: absolute;
+  top: 38%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+  .account-page .login .toggle-password {
+    top: 30%;
+  }
+}
+.account-page .login .toggle-password img {
+  width: 20px;
+  height: auto;
+}
+.account-page .login__button,
+.account-page .login__forgot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 22px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+}
+@media screen and (max-width: 480px) {
+  .account-page .login__button,
+  .account-page .login__forgot {
+    font-size: 10px;
+  }
+}
+.account-page .login__button {
+  background-color: #0c2752;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+}
+.account-page .login__button:hover {
+  background-color: #0056b3;
+}
+.account-page .login__forgot {
+  color: #0c2752;
+  transition: color 0.3s ease;
+}
+.account-page .login__forgot:hover {
+  color: #0056b3;
+}
+.account-page .new-account {
+  background-color: #f1f3f4;
+  padding: 24px 140px;
+  flex: 1;
+  max-width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .account-page .new-account {
+    padding: 10px;
+    min-width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .account-page .new-account {
+    padding: 5px;
+    min-width: 100%;
+  }
+}
+.account-page .new-account__title {
+  color: #0c2752;
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .account-page .new-account__title {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .account-page .new-account__title {
+    font-size: 18px;
+  }
+}
+.account-page .new-account__services {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 0;
+}
+.account-page .new-account__services .service {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 0 8px;
+}
+.account-page .new-account__services .service::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
+.account-page .new-account__services .service a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 390;
+  font-size: 16px;
+  line-height: 16px;
+  transition: color 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .account-page .new-account__services .service a {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .account-page .new-account__services .service a {
+    font-size: 10px;
+  }
+}
+.account-page .new-account__services .service a:hover {
+  color: #0056b3;
+}
+.account-page .new-account__services .service-order::before {
+  content: url("/images/ClockCounterClockwise.png");
+}
+.account-page .new-account__services .service-return::before {
+  content: url("/images/ArrowUDownLeft.png");
+}
+.account-page .new-account__services .service-manage::before {
+  content: url("/images/MapPin.png");
+}
+.account-page .new-account__services .service-wishlist::before {
+  content: url("/images/HeartStraight.png");
+}
+.account-page .new-account__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #0c2752;
+  color: #ffffff;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  font-weight: 450;
+  line-height: 22px;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .account-page .new-account__button {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .account-page .new-account__button {
+    font-size: 12px;
+  }
+}
+.account-page .new-account__button:hover {
+  background-color: #0056b3;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.modal__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f1f3f4;
+  padding: 120px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 768px) {
+  .modal__content {
+    padding: 80px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal__content {
+    padding: 60px;
+  }
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  line-height: 24px;
+  cursor: pointer;
+  color: #0c2752;
+  transition: color 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .modal__close {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal__close {
+    font-size: 18px;
+  }
+}
+.modal__close:hover {
+  color: #0056b3;
+}
+.modal__text {
+  font-size: 24px;
+  line-height: 24px;
+  color: #000000;
+}
+@media screen and (max-width: 768px) {
+  .modal__text {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .modal__text {
+    font-size: 18px;
+  }
+}
+.subscription {
+  text-align: center;
+  background-color: #f1f3f4;
+  padding: 2px 0 20px 0;
+}
+.subscription__info {
+  font-size: 16px;
+  line-height: 16px;
+}
+@media screen and (max-width: 768px) {
+  .subscription__info {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .subscription__info {
+    font-size: 12px;
+  }
+}
+.subscription__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+}
+@media screen and (max-width: 768px) {
+  .subscription__form {
+    padding: 8px 20px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .subscription__form {
+    padding: 8px 20px;
+  }
+}
+.subscription__form input[type="email"] {
+  border: 1px solid #d9d9d9;
+  padding: 10px 8px 10px 21px;
+  width: 30%;
+  background-color: #f1f3f4;
+}
+@media screen and (max-width: 768px) {
+  .subscription__form input[type="email"] {
+    padding: 8px 6px;
+    font-size: 12px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .subscription__form input[type="email"] {
+    padding: 6px 4px;
+    font-size: 10px;
+  }
+}
+.subscription__form input[type="email"]::placeholder {
+  color: #000000;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: 390;
+}
+.subscription__form-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #0c2752;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: 450;
+  width: 30%;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+}
+@media screen and (max-width: 768px) {
+  .subscription__form-button {
+    font-size: 14px;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .subscription__form-button {
+    font-size: 12px;
+    width: 100%;
+  }
+}
+.subscription__form-button::before {
+  content: url("/images/EnvelopeSimple.svg");
+  margin-right: 10px;
+}
+.subscription__form-button:hover {
+  background-color: #0056b3;
+}
+.footer {
+  background-color: #0c2752;
+  color: #d9d9d9;
+  height: 200px;
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    height: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer {
+    height: 100px;
+  }
+}
+.footer__text {
+  font-weight: 450;
+  font-size: 35.64px;
+  line-height: 50.96px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .footer__text {
+    font-size: 28px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .footer__text {
+    font-size: 24px;
+  }
+}

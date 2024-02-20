@@ -638,9 +638,10 @@ header {
         }
       }
 
-      .search-icon::before {
-        content: url("/images/MagnifyingGlass.png");
-      }
+      @searchIconPath: "/images/MagnifyingGlass.png";
+.search-icon::before {
+  content: url(@searchIconPath);
+}
       .chat-icon::before {
         content: url("/images/Chats.png");
       }
