@@ -754,16 +754,16 @@ header .main-menu .icon-menu .cart-icon::before {
   color: #0056b3;
 }
 .account-page .new-account__services .service-order::before {
-  content: url("/images/ClockCounterClockwise.png");
+  content: url("images/ClockCounterClockwise.png");
 }
 .account-page .new-account__services .service-return::before {
-  content: url("/images/ArrowUDownLeft.png");
+  content: url("images/ArrowUDownLeft.png");
 }
 .account-page .new-account__services .service-manage::before {
-  content: url("/images/MapPin.png");
+  content: url("../images/MapPin.png");
 }
 .account-page .new-account__services .service-wishlist::before {
-  content: url("/images/HeartStraight.png");
+  content: url("../images/HeartStraight.png");
 }
 .account-page .new-account__button {
   display: flex;
